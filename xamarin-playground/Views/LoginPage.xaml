@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarin_playground.Views.LoginPage">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <Frame Padding="10,10,10,10"
+                   HorizontalOptions="FillAndExpand"
+                   HasShadow="True">
+
+                <Image HorizontalOptions="Start" 
+                       WidthRequest="106"
+                       HeightRequest="18"
+                       Source="https://ottimizza.com.br/images/ottimizza.png"/>
+            </Frame>
+
+            <StackLayout Padding="5,5,5,5">
+                <Label Text="Autenticação"
+                       VerticalOptions="Start"
+                       HorizontalOptions="Start"/>
+            
+                <Entry Placeholder="CNPJ"
+                       Style="{StaticResource authentication}"/>
+
+                <Entry Placeholder="Chave de Acesso"
+                       Style="{StaticResource authentication}"/>
+
+                <Button Text="Autenticar"
+                    Style="{StaticResource BtnRegistrar}"
+                    Clicked="autenticar"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
